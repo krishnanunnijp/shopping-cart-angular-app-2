@@ -13,4 +13,10 @@ export class ApiService {
   fetchPassword=(value2:any)=>{
     return this.http.post("http://localhost:8080/password",value2)
   }
+  fetchProduct=()=>{
+    return this.http.get("http://localhost:8080/")
+  }
+  addProduct=(value3:any)=>{
+    return this.http.post("http://localhost:8080/add",value3)
+  }
 }

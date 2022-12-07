@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h3>Shopping ADD  portal </h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">name</label>
+                    <input name="name" [(ngModel)]="name" type="text" type="text" class="form-control">
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">price</label>
+                    <input name="price" [(ngModel)]="price" type="text" class="form-control">
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">description</label>
+                    <textarea name="description" [(ngModel)]="description" id="" cols="8"  class="form-control"></textarea>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">category</label>
+                    <input name="category" [(ngModel)]="category"  type="text" class="form-control">
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">image</label>
+                    <input name="image"  [(ngModel)]="image" type="text" class="form-control">
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <a (click)="addProduct()" class="btn btn-warning">Add book</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
