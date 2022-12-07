@@ -19,4 +19,7 @@ export class ApiService {
   addProduct=(value3:any)=>{
     return this.http.post("http://localhost:8080/add",value3)
   }
+  searchProduct=(value5:any)=>{
+    return this.http.post("http://localhost:8080/search",value5)
+  }
 }
