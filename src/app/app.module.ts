@@ -10,7 +10,8 @@ import{HttpClientModule}from '@angular/common/http';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { AddProductComponent } from './add-product/add-product.component';
-import { ViewProductComponent } from './view-product/view-product.component'
+import { ViewProductComponent } from './view-product/view-product.component';
+import { NavbarProductComponent } from './navbar-product/navbar-product.component'
 const myRouter:Routes=[
   {
     path:"",
@@ -37,7 +38,8 @@ const myRouter:Routes=[
     RegisterUserComponent,
     UserLoginComponent,
     AddProductComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    NavbarProductComponent
   ],
   imports: [
     BrowserModule,
