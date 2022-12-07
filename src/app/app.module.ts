@@ -8,7 +8,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
 import{HttpClientModule}from '@angular/common/http';
 import { RegisterUserComponent } from './register-user/register-user.component';
-import { UserLoginComponent } from './user-login/user-login.component'
+import { UserLoginComponent } from './user-login/user-login.component';
+import { AddProductComponent } from './add-product/add-product.component'
 const myRouter:Routes=[
   {
     path:"",
@@ -19,6 +20,9 @@ const myRouter:Routes=[
   },{
     path:"user",
     component: UserLoginComponent
+  },{
+    path:"add",
+    component: AddProductComponent
   }
 ]
 
@@ -27,7 +31,8 @@ const myRouter:Routes=[
     AppComponent,
     AdminLoginComponent,
     RegisterUserComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
