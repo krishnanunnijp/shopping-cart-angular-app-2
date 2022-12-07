@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms';
 import{HttpClientModule}from '@angular/common/http';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { UserLoginComponent } from './user-login/user-login.component';
-import { AddProductComponent } from './add-product/add-product.component'
+import { AddProductComponent } from './add-product/add-product.component';
+import { ViewProductComponent } from './view-product/view-product.component'
 const myRouter:Routes=[
   {
     path:"",
@@ -23,6 +24,9 @@ const myRouter:Routes=[
   },{
     path:"add",
     component: AddProductComponent
+  },{
+    path:"view",
+    component: ViewProductComponent
   }
 ]
 
@@ -32,7 +36,8 @@ const myRouter:Routes=[
     AdminLoginComponent,
     RegisterUserComponent,
     UserLoginComponent,
-    AddProductComponent
+    AddProductComponent,
+    ViewProductComponent
   ],
   imports: [
     BrowserModule,
