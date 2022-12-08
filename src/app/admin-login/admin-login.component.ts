@@ -12,7 +12,7 @@ export class AdminLoginComponent {
   constructor(private route:Router){}
   login=()=>{
     if(this.username=="admin" && this.password=="12345"){
-      this.route.navigate(['/'])
+      this.route.navigate(['/add'])
       this.username=""
       this.password=""
     }else{
