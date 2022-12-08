@@ -7,7 +7,13 @@ import { ApiService } from '../api.service';
   styleUrls: ['./search-product.component.css']
 })
 export class SearchProductComponent {
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService){
+    api.fetchProduct().subscribe(
+      (generated:any)=>{
+        this.data=generated
+      }
+    )
+  }
   name=""
 
   data:any=[]
@@ -16,6 +22,7 @@ export class SearchProductComponent {
     let data1={
       "name":this.name
     }
+
     this.api.searchProduct(data1).subscribe(
       (generated:any)=>{
         if(generated.length!=0){
@@ -26,8 +33,10 @@ export class SearchProductComponent {
         }
 
       }
+
     )
 
   }
+  
 
 }

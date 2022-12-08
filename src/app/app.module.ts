@@ -12,7 +12,8 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { NavbarProductComponent } from './navbar-product/navbar-product.component';
-import { SearchProductComponent } from './search-product/search-product.component'
+import { SearchProductComponent } from './search-product/search-product.component';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component'
 const myRouter:Routes=[
   {
     path:"",
@@ -44,7 +45,8 @@ const myRouter:Routes=[
     AddProductComponent,
     ViewProductComponent,
     NavbarProductComponent,
-    SearchProductComponent
+    SearchProductComponent,
+    UserNavbarComponent
   ],
   imports: [
     BrowserModule,

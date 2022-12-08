@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent {
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService,private router:Router){}
   email=""
   password=""
   readData=()=>{
@@ -17,7 +18,9 @@ export class UserLoginComponent {
     this.api.fetchPassword(data).subscribe(
       (generated:any)=>{
         if(generated.password== this.password){
-          alert("login success")
+          this.router.navigate(['/search'])
+          ApiService.nav="<app-user-navbar></app-user-navbar>"
+          
         }else{
           alert("invalid password")
         }
