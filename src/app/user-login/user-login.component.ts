@@ -22,9 +22,10 @@ export class UserLoginComponent {
         this.data1=generated
         console.log(this.data1)
         if(generated.status=="success"){
-          localStorage.setItem("nav","<app-user-navbar></app-user-navbar>")
-          localStorage.setItem("userinfo",generated.id)
-          this.router.navigate(['/search'])
+          localStorage.setItem("nav","1")
+          console.log(this.data1.id)
+          localStorage.setItem("userinfo",this.data1.id)
+          this.router.navigate(['/profile'])
          
         }else{
           alert("invalid password")

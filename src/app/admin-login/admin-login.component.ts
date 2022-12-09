@@ -13,7 +13,7 @@ export class AdminLoginComponent {
   constructor(private route:Router){}
   login=()=>{
     if(this.username=="admin" && this.password=="12345"){
-      localStorage.setItem("nav","<app-navbar-product></app-navbar-product>")
+      localStorage.setItem("nav","2")
       this.route.navigate(['/add'])
       this.username=""
       this.password=""

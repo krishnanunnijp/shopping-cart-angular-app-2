@@ -13,7 +13,8 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { NavbarProductComponent } from './navbar-product/navbar-product.component';
 import { SearchProductComponent } from './search-product/search-product.component';
-import { UserNavbarComponent } from './user-navbar/user-navbar.component'
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component'
 const myRouter:Routes=[
   {
     path:"",
@@ -33,6 +34,9 @@ const myRouter:Routes=[
   },{
     path:"search",
     component: SearchProductComponent
+  },{
+    path:"profile",
+    component: ViewProfileComponent
   }
 ]
 
@@ -46,7 +50,8 @@ const myRouter:Routes=[
     ViewProductComponent,
     NavbarProductComponent,
     SearchProductComponent,
-    UserNavbarComponent
+    UserNavbarComponent,
+    ViewProfileComponent
   ],
   imports: [
     BrowserModule,
