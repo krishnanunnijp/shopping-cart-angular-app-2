@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-profile',
@@ -7,7 +8,21 @@ import { Component } from '@angular/core';
 })
 export class ViewProfileComponent {
   userid:any=""
-  constructor(){
+  data:any=[]
+  constructor(private api:ApiService){
     this.userid=localStorage.getItem("userinfo")
+    let data1:any=  {
+      "id": this.userid
   }
+
+    api.searchProfile(data1).subscribe(
+      (generated:any)=>{
+        console.log(generated)
+        this.data=generated
+
+      }
+    )
+  }
+
+
 }

@@ -22,5 +22,9 @@ export class ApiService {
   searchProduct=(value5:any)=>{
     return this.http.post("http://localhost:8080/search",value5)
   }
+  searchProfile=(value5:any)=>{
+    return this.http.post("http://localhost:8080/searchuser",value5)
+  }
+  
 
 }
