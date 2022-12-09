@@ -1,12 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ViewProductComponent } from './view-product/view-product.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  static nav=""
 
   constructor(private http:HttpClient,) { }
   addUser=(value:any)=>{
