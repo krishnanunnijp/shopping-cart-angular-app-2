@@ -8,7 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class ViewProductComponent {
   data :any =[]
-  nav=ApiService.nav
+  
   constructor(private api:ApiService){
     
     api.fetchProduct().subscribe(

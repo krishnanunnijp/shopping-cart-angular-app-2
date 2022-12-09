@@ -11,16 +11,21 @@ export class UserLoginComponent {
   constructor(private api:ApiService,private router:Router){}
   email=""
   password=""
+  data1:any=[]
   readData=()=>{
     let data:any={
-      "email":this.email
+      "email":this.email,
+      "password":this.password
     }
     this.api.fetchPassword(data).subscribe(
       (generated:any)=>{
-        if(generated.password== this.password){
+        this.data1=generated
+        console.log(this.data1)
+        if(generated.status=="success"){
+          localStorage.setItem("nav","<app-user-navbar></app-user-navbar>")
+          localStorage.setItem("userinfo",generated.id)
           this.router.navigate(['/search'])
-          ApiService.nav="<app-user-navbar></app-user-navbar>"
-          
+         
         }else{
           alert("invalid password")
         }
